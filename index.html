@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyTech</title>
-    
-    <!-- Estilos personalizados css -->
-    <link rel="stylesheet" href="css/styles.css" >
+
 
      <!--bootstrap conexion    -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <!-- Estilos personalizados css -->
+    <link rel="stylesheet" href="css/styles.css" >
     
    
     
 </head>
-<body id="body">
+<body id="body" onload="showSlide(1)">
     <div class="container-fluid m-0 p-0 fix">
         <nav class="navbar m-0 p-0 header_nav col-12 col-xs-12">
            
                 <div class="row col-12 col-lg-3  col-sm-12 m-0 p-0 " >
                     <a class=" float-start bg-logo m-0 p-0" >
-                        <img class="navbar-brand" src="/img/logo.png" alt="logo_easy_tech" width="300">
+                        <img class="navbar-brand" src="img/logo.png" alt="logo_easy_tech" width="300">
                     </a>
                 </div>
                 <div class=" col-12 col-md-9 col-sm-12   container_contactos justify-content-end "  >
@@ -31,7 +30,7 @@
                         <div class="icon_tienda">
                             <div>
                                     <a>
-                                        <img class="icon"src="img/carrito-de-compras-white.png" alt="tienda_icon">
+                                        <img class="icon" src="img/carrito-de-compras-white.png" alt="tienda_icon">
                                         
                                     </a>
                                     
@@ -57,10 +56,15 @@
               
                 <div class="row col-12 nav_opciones">
   
-                  <a href="#slides__1">INICIO</a>
+                  <!-- <a href="#slides__1">INICIO</a>
                   <a href="#slides__2" >PERSPECTIVA</a>
                   <a href="#slides__3" >NOSOTROS</a>
-                  <a href="#slides__4">CONTACTO</a>
+                  <a href="#slides__4">CONTACTO</a> -->
+                  <a  onclick="showSlide(1)" href="#slides__1" >INICIO</a>
+                  <a  onclick="showSlide(2)" href="#slides__2" >PERSPECTIVA</a>
+                  <a  onclick="showSlide(3)" href="#slides__3" >NOSOTROS</a>
+                  <a  onclick="showSlide(4)" href="#slides__4" >CONTACTO</a>
+                  
               
 
                 </div>
@@ -76,269 +80,293 @@
     </div>
     
     
-        <div class="slider-container ">
-            <div class="slider">
-              <div class="slides">
-                <div id="slides__1" class="slide">
-                  <!-- <span class="slide__text">1</span> -->
-                  <div class="bg_img">
-                    <img src="img/interior1_oficina.jpg" alt="">
+    <div class="slider-container">
+        <div class="slider">
+          <div class="slides">
+            <div id="slides__1" class="slide">
+              
+              <!-- <span class="slide__text">1</span> -->
+              <div class="bg_img">
+                <img src="img/interior1_oficina.jpg" alt="">
+              </div>
+              <div class="container_titulos">
+                <div class="container_titulos_inv glass_effect">
+                  <h1>Elige lo nuestro</h1>
+                  <p>Tu mejor opción en
+                    productos, servicios de tecnología y seguridad.
+                  </p>
+                </div>
+                
+              </div>
+              
+              <div class="info_sections">
+                
+                <div class="info">
+                  <div class="slide_sombra_d">
+                    <p></p>
                   </div>
-                  <div class="container_titulos">
-                    <div class="container_titulos_inv glass_effect">
-                      <h1>Elige lo nuestro</h1>
-                      <p>Tu mejor opción en
-                        productos, servicios de tecnología y seguridad.
+                  <div class="info_title_r">
+                    <h1>SOFTWARE</h1>
+                  </div>
+                  <div class="info_text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
+                  </div>
+                  <div class="slide_sombra_i">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="info_text">
+                    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</section>
+                  </div>
+                  <div class="info_title_l">
+
+                    <div class="mini_slider">
+                      <ul>
+                        <li>
+                          <img src="img/sections/engineer-4904884_1920.jpg" alt="">
+                        </li>
+                        <li>
+                          <img src="img/sections/camera-1124585_1920.jpg" alt="">
+                        </li>
+                        <li>
+                          <img src="img/sections/laptop-5891723_1920.jpg" alt="">
+                        </li>
+                      </ul>
+                      
+                    </div>
+
+                    <h1>HARDWARE</h1>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="info_title_r">
+                    <h1>SEGURIDAD</h1>
+                  </div>
+                  <div class="info_text">
+                    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</section>
+                  </div>
+                </div>
+              </div>
+              <a class="slide__prev" href="#slides__4" title="Next"></a>
+              <a class="slide__next" href="#slides__2" title="Next"></a>
+            </div>
+
+            <div id="slides__2" class="slide">
+              <div class="bg_img">
+                <img src="img/fachada_oficina.jpg" alt="">
+              </div>
+              <div class="container_titulos">
+                <div class="container_titulos_inv glass_effect">
+                  <h1>EASY TECH</h1>
+                  <p>Productos, servicios y seguridad tecnológica de calidad.</p>
+                </div>
+                
+              </div> 
+              <div class="info_sections_perspectiva">
+                <div class="info_perspectiva">
+                  <div class="info_title_perspectiva">
+                    <h1>MISION</h1>
+                  </div>
+                  <div class="info_img_perspectiva">
+                    img
+                  </div>
+                  <div class="info_text_perspectiva">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
+                  </div>
+                </div>
+                <div class="info_perspectiva">
+                  <div class="info_title_perspectiva">
+                    <h1>VISION</h1>
+                  </div>
+                  <div class="info_img_perspectiva">
+                    img
+                  </div>
+                  <div class="info_text_perspectiva">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
+                  </div>
+                </div>
+                <div class="info_perspectiva">
+                  <div class="info_title_perspectiva">
+                    <h1>NUESTROS VALORES</h1>
+                  </div>
+                  <div class="info_img_perspectiva">
+                    img
+                  </div>
+                  <div class="info_text_perspectiva">
+                    <p>Responsabilidad:</p>
+                    <ul>
+                      
+                      <li>Cumplimos con nuestros compromisos y en todas las actividades que realizamos.</li>
+                      <li>Actuamos de forma diligente y resolutiva con nuestros clientes, cumpliendo los compromisos adquiridos.</li>
+                    </ul>
+                    <p>Trascendencia</p>
+                    <ul>
+                      
+                      <li>Actuamos como emprendedores, promoviendo la sostenibilidad de nuestras acciones.</li>
+                      <li>Promovemos la colaboración y búsqueda de productos y servicios tecnológicos de calidad.</li>
+                    </ul>
+    
+                  </div>
+                </div>
+                
+              </div>
+              <!-- <img src="img/interior1_oficina.jpg" alt=""> -->
+              <a class="slide__prev" href="#slides__1" title="Next"></a>
+              <a class="slide__next" href="#slides__3" title="Next"></a>
+              <!-- <span class="slide__text">2</span> -->
+            </div>
+
+
+            <div id="slides__3" class="slide">
+              <div class="bg_img">
+                <img src="img/oficina-scaled.jpg" alt="">
+              </div>
+              <div class="container_titulos">
+                <div class="container_titulos_inv glass_effect">
+                  <h1>NUESTRA META</h1>
+                  <p>Ser referentes en calidad en el sector tecnólogico</p>
+                </div>
+              </div>
+              <div class="info_sections_4"> 
+                <!-- formulario de contacto en html y css -->  
+                <div class="container_form">
+                  <div class="info_img_nosotros">
+                    img
+                  </div>
+                  
+                </div>
+                <div class="container_map"> 
+                  
+                  <div class="info_title_nosotros" >
+                    <h1>NOSOTROS</h1>
+                  </div>
+                  <div class="info_text_nosotros">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
+                  </div>  
+
+                    
+                    
+                    
+                  
+                </div>
+                
+              </div>
+              
+
+              
+
+
+              <!-- <img src="img/oficina-scaled.jpg" alt=""> -->
+              <a class="slide__prev" href="#slides__2" title="Next"></a>
+              <a class="slide__next" href="#slides__4" title="Next"></a>
+              <!-- <span class="slide__text">3</span> -->
+            </div>
+
+            <div id="slides__4" class="slide">
+              <div class="bg_img">
+                <img src="img/hands.jpg" alt="">
+              </div>
+              <div class="container_titulos">
+                <div class="container_titulos_inv glass_effect">
+                  <h1>Contáctanos</h1>
+                  <p>Ser referentes en calidad en el sector tecnólogico</p>
+                </div> 
+              </div>
+              <div class="info_sections_4"> 
+                <!-- formulario de contacto en html y css -->  
+                <div class="container_form">
+                  <div class="formulario" >      
+                      <h1>Siéntase libre en contactarse con nosotros</h1>
+                        <form action="Php/email.php" method="POST">       
+                          <div>
+                            <label for="nombre" class="colocar_nombre">Nombre
+                              <span class="obligatorio">*</span>
+                            </label>
+                              <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                          </div>
+                        
+                          <div>
+                            <label for="email" class="colocar_email">Email
+                              <span class="obligatorio">*</span>
+                            </label>
+                            <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                          </div>
+                      
+                          <div>
+                            <label for="telefono" class="colocar_telefono">Teléfono
+                            </label>
+                            <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                          </div>    
+                        
+                          <div>
+                            <label for="asunto" class="colocar_asunto">Asunto
+                              <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+                          </div>    
+                        
+                          <div>
+                            <label for="mensaje" class="colocar_mensaje">Mensaje
+                              <span class="obligatorio">*</span>
+                            </label>                     
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                          </div>                    
+                        
+                          <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+
+                          <p class="aviso">
+                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                          </p>          
+                          
+                        </form>
+                  </div>  
+                  
+                </div>
+                <div class="container_map"> 
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4360127250109!2d-78.13274880000002!3d0.3495962999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a3d0a5c3e707f%3A0x771b86dcca947d85!2sEasyTech%20S.A.S!5e0!3m2!1ses!2sec!4v1660199632515!5m2!1ses!2sec" width="80%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <div>
+                    <div>
+                      <img src="img/simbolo-de-la-rejilla-de-la-tierra.png" alt=""> 
+                      <p>
+                        Abelardo Moran 2-19, Dr. Juan José Páez <br> Ibarra – Ecuador
+                      </p>
+                    </div>
+                    <div>
+                      <img src="" alt="">
+                      <p>
+                        Horarios de atención 
+                      </p>
+                    </div>
+                    <div>
+                      <img src="img/CalendarMonthOutlineRounded-white.png" alt="">  
+                      <p>
+                        Lunes – Viernes:09:00 AM – 17:00 PM <br> Sábado: 08:00 AM – 13:00 PM
                       </p>
                     </div>
                     
-                  </div>
-                  
-                  <div class="info_sections">
-                    <div class="info">
-                      <div class="info_title_r">
-                        <h1>SOFTWARE</h1>
-                      </div>
-                      <div class="info_text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="info_text">
-                        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</section>
-                      </div>
-                      <div class="info_title_l">
-                        <h1>HARDWARE</h1>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="info_title_r">
-                        <h1>SEGURIDAD</h1>
-                      </div>
-                      <div class="info_text">
-                        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</section>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="slide__prev" href="#slides__4" title="Next"></a>
-                  <a class="slide__next" href="#slides__2" title="Next"></a>
-                </div>
-
-                <div id="slides__2" class="slide">
-                  <div class="bg_img">
-                    <img src="img/fachada_oficina.jpg" alt="">
-                  </div>
-                  <div class="container_titulos">
-                    <div class="container_titulos_inv glass_effect">
-                      <h1>EASY TECH</h1>
-                      <p>Productos, servicios y seguridad tecnológica de calidad.</p>
+                    <div>
+                      <img src="img/phone-call-white.png" alt=""> 
+                      <p>
+                        +593 (0) 99 874 9650 - info@easytech.com.ec
+                      </p>
                     </div>
                     
-                  </div> 
-                  <div class="info_sections_perspectiva">
-                    <div class="info_perspectiva">
-                      <div class="info_title_perspectiva">
-                        <h1>MISION</h1>
-                      </div>
-                      <div class="info_img_perspectiva">
-                        img
-                      </div>
-                      <div class="info_text_perspectiva">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
-                      </div>
-                    </div>
-                    <div class="info_perspectiva">
-                      <div class="info_title_perspectiva">
-                        <h1>VISION</h1>
-                      </div>
-                      <div class="info_img_perspectiva">
-                        img
-                      </div>
-                      <div class="info_text_perspectiva">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
-                      </div>
-                    </div>
-                    <div class="info_perspectiva">
-                      <div class="info_title_perspectiva">
-                        <h1>NUESTROS VALORES</h1>
-                      </div>
-                      <div class="info_img_perspectiva">
-                        img
-                      </div>
-                      <div class="info_text_perspectiva">
-                        <p>Responsabilidad:</p>
-                        <ul>
-                          
-                          <li>Cumplimos con nuestros compromisos y en todas las actividades que realizamos.</li>
-                          <li>Actuamos de forma diligente y resolutiva con nuestros clientes, cumpliendo los compromisos adquiridos.</li>
-                        </ul>
-                        <p>Trascendencia</p>
-                        <ul>
-                          
-                          <li>Actuamos como emprendedores, promoviendo la sostenibilidad de nuestras acciones.</li>
-                          <li>Promovemos la colaboración y búsqueda de productos y servicios tecnológicos de calidad.</li>
-                        </ul>
-       
-                      </div>
-                    </div>
+                    
+                    
                     
                   </div>
-                  <!-- <img src="img/interior1_oficina.jpg" alt=""> -->
-                  <a class="slide__prev" href="#slides__1" title="Next"></a>
-                  <a class="slide__next" href="#slides__3" title="Next"></a>
-                  <!-- <span class="slide__text">2</span> -->
                 </div>
-
-
-                <div id="slides__3" class="slide">
-                  <div class="bg_img">
-                    <img src="img/oficina-scaled.jpg" alt="">
-                  </div>
-                  <div class="container_titulos">
-                    <div class="container_titulos_inv glass_effect">
-                      <h1>NUESTRA META</h1>
-                      <p>Ser referentes en calidad en el sector tecnólogico</p>
-                    </div>
-                  </div>
-                  <div class="info_sections_4"> 
-                    <!-- formulario de contacto en html y css -->  
-                    <div class="container_form">
-                      <div class="info_img_nosotros">
-                        img
-                      </div>
-                      
-                    </div>
-                    <div class="container_map"> 
-                      
-                      <div class="info_title_nosotros">
-                        <h1>NOSOTROS</h1>
-                      </div>
-                      <div class="info_text_nosotros">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
-                      </div>  
-
-                        
-                        
-                        
-                      
-                    </div>
-                    
-                  </div>
-                  
-
-                  
-
-
-                  <!-- <img src="img/oficina-scaled.jpg" alt=""> -->
-                  <a class="slide__prev" href="#slides__2" title="Next"></a>
-                  <a class="slide__next" href="#slides__4" title="Next"></a>
-                  <!-- <span class="slide__text">3</span> -->
-                </div>
-
-                <div id="slides__4" class="slide">
-                  <div class="bg_img">
-                    <img src="img/hands.jpg" alt="">
-                  </div>
-                  <div class="container_titulos">
-                    <div class="container_titulos_inv glass_effect">
-                      <h1>Contáctanos</h1>
-                      <p>Ser referentes en calidad en el sector tecnólogico</p>
-                    </div> 
-                  </div>
-                  <div class="info_sections_4"> 
-                    <!-- formulario de contacto en html y css -->  
-                    <div class="container_form">
-                      <div class="formulario">      
-                          <h1>Siéntase libre en contactarse con nosotros</h1>
-                            <form action="Php/email.php" method="POST">       
-                              <div>
-                                <label for="nombre" class="colocar_nombre">Nombre
-                                  <span class="obligatorio">*</span>
-                                </label>
-                                  <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                              </div>
-                            
-                              <div>
-                                <label for="email" class="colocar_email">Email
-                                  <span class="obligatorio">*</span>
-                                </label>
-                                <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                              </div>
-                          
-                              <div>
-                                <label for="telefono" class="colocar_telefono">Teléfono
-                                </label>
-                                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                              </div>    
-                            
-                              <div>
-                                <label for="asunto" class="colocar_asunto">Asunto
-                                  <span class="obligatorio">*</span>
-                                </label>
-                                <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
-                              </div>    
-                            
-                              <div>
-                                <label for="mensaje" class="colocar_mensaje">Mensaje
-                                  <span class="obligatorio">*</span>
-                                </label>                     
-                                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                              </div>                    
-                            
-                              <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-
-                              <p class="aviso">
-                                <span class="obligatorio"> * </span>los campos son obligatorios.
-                              </p>          
-                              
-                            </form>
-                      </div>  
-                      
-                    </div>
-                    <div class="container_map"> 
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4360127250109!2d-78.13274880000002!3d0.3495962999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a3d0a5c3e707f%3A0x771b86dcca947d85!2sEasyTech%20S.A.S!5e0!3m2!1ses!2sec!4v1660199632515!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                      <div>
-                        <div>
-                          <img src="img/simbolo-de-la-rejilla-de-la-tierra.png" alt=""> 
-                          <p>
-                            Abelardo Moran 2-19, Dr. Juan José Páez <br> Ibarra – Ecuador
-                          </p>
-                        </div>
-                        <div>
-                          <img src="" alt="">
-                          <p>
-                            Horarios de atención 
-                          </p>
-                        </div>
-                        <div>
-                          <img src="img/CalendarMonthOutlineRounded-white.png" alt="">  
-                          <p>
-                            Lunes – Viernes:09:00 AM – 17:00 PM <br> Sábado: 08:00 AM – 13:00 PM
-                          </p>
-                        </div>
-                        
-                        <div>
-                          <img src="img/phone-call-white.png" alt=""> 
-                          <p>
-                            +593 (0) 99 874 9650 - info@easytech.com.ec
-                          </p>
-                        </div>
-                        
-                        
-                        
-                        
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <!-- <img src="img/hands.jpg" alt=""> -->
-                  <a class="slide__prev" href="#slides__3" title="Next"></a>
-                  <a class="slide__next" href="#slides__1" title="Next"></a>
-                  <!-- <span class="slide__text">4</span> -->
-
-                </div>
+                
               </div>
+              <!-- <img src="img/hands.jpg" alt=""> -->
+              <a class="slide__prev" href="#slides__3" title="Next"></a>
+              <a class="slide__next" href="#slides__1" title="Next"></a>
+              <!-- <span class="slide__text">4</span> -->
+
             </div>
+          </div>
+        </div>
           
     </div>
 
@@ -349,7 +377,9 @@
 
 
       
-
+    <script src="js/animaciones.js"> 
+         
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

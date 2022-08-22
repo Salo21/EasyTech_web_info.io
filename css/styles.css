@@ -17,6 +17,7 @@ body{
     overflow-y:visible;
     scrollbar-color: #01445e transparent !important;
     scrollbar-width: thin !important;
+    top: auto;
  }
 /* scroll personalizado para navegadores diferentes a mozilla */
 /*Webkit*/
@@ -48,13 +49,17 @@ body::-webkit-scrollbar-thumb {
 
 .header_nav{
     
-    background-color: rgb(255, 255, 255);
+    background-color: #01445e;
     font-size: small;
+    
+    transition: 1s;
 }
+
+
 .fix{
-    /* position: sticky;
+    position: sticky;
     top:0%;
-    z-index: 99; */
+    z-index: 99;
 }
 .bg-logo{
     background-color: #FFF;
@@ -84,7 +89,7 @@ body::-webkit-scrollbar-thumb {
     /* padding-top: 2%;
     margin-bottom: 0%;
     padding-bottom: 0%; */
-    color: #FFF;
+    color: rgb(255, 255, 255);
     margin-top: 2%;
     border: none;
     margin: 0% ;
@@ -137,7 +142,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0px;
     justify-content: center;
     background: linear-gradient(180deg, rgb(223, 223, 230,3) 50%, rgba(1, 68, 94,0.2));
-    
+    position: relative;
     
     
 
@@ -145,19 +150,23 @@ body::-webkit-scrollbar-thumb {
 .nav_opciones a{
 
     width: 25%;
-    height: 100%;
+    /* evita que la altura cambie cuando el tamaño del font aumenta */
+    height: 1.8rem;
     padding: 0%;
     text-decoration: none;
     color: #01445e;
+
 }
 .nav_opciones :hover{
 
     width: 25%;
     background-color: #e9eef1d8;
-    transition: 1s;
+    transition: 0.3s;
+    font-size: 1.3rem;
     
     
 }
+
 
 /* background base del nav */
 .bg_nav{
@@ -165,36 +174,37 @@ body::-webkit-scrollbar-thumb {
     z-index: -100;
     position:relative;
 }
-
+ 
 /* End header secction */
+
+
 /* Start content section */
 
 
 .slider-container {
     /* background: linear-gradient(149deg, rgb(247, 0, 255) 0%, rgb(255, 145, 0) 100%);
-     */
+        */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding-top: 7.9%; */
-    /* border: 2px solid red; */
-    /* height: 201.5vh; */
+    /* padding-top: 7.9%; */    
+    height: 201.5vh;
+    padding: auto;
+    /* margin-top: 200%; */
    
-    
-    
- 
 }
 
 .slider {
     
     width: 100%;
     max-width: 3500px;
-    height: 201.5vh;
+    /* height: 201.5vh; */
+    height: 100%;
+
     text-align: center;
     /* position: relative; */
-
-   position:static;
-
+    
+    position:static;
 
     
 }
@@ -202,18 +212,18 @@ body::-webkit-scrollbar-thumb {
 .slides {
     display: flex;
     overflow-x: scroll;
-    position: absolute;
+    overflow-y: hidden;
+    position: relative;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    overflow-y: hidden;
-    overflow-x: scroll;
     margin: 0%;
     padding: 0%;
-    height: 201vh;
+    /* height: 201vh; */
     scrollbar-color: #01445e transparent;
     scrollbar-width: thin;
-    
- 
+    height: 100%;
+
+
 
 }
 .slide:nth-of-type(even) {
@@ -225,7 +235,8 @@ body::-webkit-scrollbar-thumb {
     align-items: flex-start;
     flex-shrink: 0;
     width: 100%;
-    height: 200vh;
+    /* height: 200vh; */
+    height: 100%;
     margin-right: 0px;
     padding: 0px;   
     margin-bottom: -4.77%;
@@ -236,9 +247,12 @@ body::-webkit-scrollbar-thumb {
     scroll-snap-align: center;
     /* ojo esta propiedad */
     /* overflow: hidden; */
+    left: auto;
+    top:auto;
 
+    transition: 0.8s;
   
-    
+   
   
 }
 .slide img{
@@ -250,6 +264,7 @@ body::-webkit-scrollbar-thumb {
     
     
 }
+
 .bg_img{
     margin: 0%;
     padding: 0%;
@@ -266,6 +281,10 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     font-family: sans-serif;
 }
+
+
+
+
 /* Flechas de navegacion*/
 
 /* .slide a {
@@ -386,6 +405,8 @@ a.slide__next,
     margin-left: 0%;
     text-align: start;
     font-size: 5.2em;
+    
+
 }
 .container_titulos p{
     margin-top: 0%;
@@ -396,7 +417,9 @@ a.slide__next,
 }
 /* parte inferior infomrativa de los sliders */
 /* informacion de las secciones */
+/* **************************+ */
 /* seccion inicio */
+
 .info_sections{
     width: 100%;
     height: 100%;
@@ -405,20 +428,25 @@ a.slide__next,
     padding-top: 0%;
     margin-top: 0%;
     background-color: #ffffff;
-    /* border: 2px solid slateblue; */
+    z-index: 30;
+    /* border: 2px solid red; */
     
 }
+    
 .info{
+    position: relative;
     display: flex;
     background-color: rgb(255, 255, 255);
     padding: 0%;
     margin: 0%;
-    height: 38.3vh;   
+    /* height: 38.3vh;    */
+    height: 19.3%;
     width: 100%;
 }
 
 
 .info_title_r{
+    position: relative;
     width: 33%;
     display: flex;
     background-color:#01445e;
@@ -426,26 +454,107 @@ a.slide__next,
     margin: 0%;
     color: #FFF;
     align-items: center;
-    padding-left: 8.2%;
+    /* padding-left: 8.2%;  */
+}
+.info_title_r h1{
+    position: absolute;
+    padding-left: 27%;
+
 }
 .info_title_l{
+    position: relative;
     display: flex;
     align-items: center;
     width: 33%;
     text-align: center;
-    background-color: #01445e;
+    /* background-color: #01445e; */
     padding: 0%;
     margin: 0%;
     color: #FFF;
-    padding-left: 8.2%;
     
 }
+.info_title_l h1{
+    position: absolute;
+    padding-left: 27%;
+}
+
+/* sombreado laterales */
+.slide_sombra_d{
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    height: 19.25%;
+    background: linear-gradient(90deg, tomato , rgba(255, 255, 255, 0) 30% );
+    opacity: 0.6;
+    
+
+}
+.slide_sombra_i{
+    position: absolute;
+    z-index: 10;
+    width: 50%;
+    height: 19.25%;
+    top: 0%;
+    right: 0%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 70% , tomato );
+    opacity: 0.6;
+}
+.slide_sombra_d:hover{
+    
+    width: 50%;
+    height: 20%;
+}
+.slide_sombra_i:hover{
+    width: 50%;
+    height: 20%;
+}
+/* minislider informativo */
+.mini_slider{
+    width: auto;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    
+    
+
+}
+.mini_slider ul{
+    display: flex;
+    padding: 0%;
+    width: 360%;
+    animation: slider_cambio 12s infinite alternate;
+    animation-timing-function: ease-in; 
+}
+
+.mini_slider li{
+    width: 100%;
+    list-style: none;
+
+}
+.mini_slider img{
+    width: 100%;
+
+}
+@keyframes slider_cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    40%{margin-left: -120%;}
+    66%{margin-left: -120%;}
+    90%{margin-left: -240%;}
+    100%{margin-left: -240%;}
+}
+/* end mini slider */
+
 .info:hover{
-    height: 40vh;
+    height: 20%;
     transition: 0.5s;
     display: flex;
     background-color: #01445e23;
     box-sizing: border-box;
+    display:flex;
+    align-items: stretch;
+    padding: 0%;
+    margin: 0%;
 }
 
 .info_text{
@@ -455,7 +564,7 @@ a.slide__next,
     align-items: center;
     align-content: center;   
 }
-
+/* **************************+ */
 /* seccion perspectiva */
 .info_sections_perspectiva{
     width: 100%;
@@ -570,7 +679,7 @@ ul{
 
 }
 
-
+/* **************************+ */
 /* Pestaña Contactanos */
     /* Formulario  */
 
@@ -719,4 +828,20 @@ button:hover{
     padding: 0%;
 }
 
-  
+/* Diseño responsivo */
+/* ++++++++++++++++++++++++++++++++++++ */
+@media (max-width: 900px) {
+    body{
+        font-size: 14px;
+    }
+}
+@media (max-width: 700px) {
+    body{
+        font-size: 11px;
+    }
+}
+@media (max-width: 400px) {
+    body{
+        font-size: 7px;
+    }
+}
