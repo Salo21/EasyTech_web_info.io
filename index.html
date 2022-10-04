@@ -6,95 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyTech</title>
 
-
-     <!--bootstrap conexion    -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="img/logo_icono.png">
+    <!--bootstrap conexion    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Estilos personalizados css -->
-    <link rel="stylesheet" href="css/styles.css" >
-    
-   
-    
+    <link rel="stylesheet" href="css/styles.css" > 
 </head>
-<body id="body" onload="showSlide(1)">
-    <div class="container-fluid m-0 p-0 fix">
+<body id="body" onload="showSlideByScroll()">
+  <!-- start header -->
+    <div class="container-fluid m-0 p-0 fix" id="header_web">
         <nav class="navbar m-0 p-0 header_nav col-12 col-xs-12">
            
-                <div class="row col-12 col-lg-3  col-sm-12 m-0 p-0 " >
-                    <a class=" float-start bg-logo m-0 p-0" >
-                        <img class="navbar-brand" src="img/logo.png" alt="logo_easy_tech" width="300">
+                <div class="row col-12 col-lg-3  col-sm-12 m-0 p-0 logo_block" >
+                    <a class=" float-start bg_logo m-0 p-0" href="#slides__1">
+                        <img class="navbar-brand" src="img/logo.png" alt="logo_easy_tech" >
                     </a>
                 </div>
-                <div class=" col-12 col-md-9 col-sm-12   container_contactos justify-content-end "  >
-                  <div class="row col-8  m-0 p-0" >
+                <div class=" col-12 col-md-9 col-sm-12 m-0 p-0  container_contactos justify-content-end "  >
+                  <div  class="search_container">
                     <form action="" class="search-form">
                       <button class="btn_search">Buscar</button>
                       <input type="search" name="search" id="search" >
                     </form>
                   </div>
-                    <div class="float-end col-1  contact_block">
-                        <div class="icon_tienda">
-                            <div>
-                                    <a>
-                                        <img class="icon" src="img/carrito-de-compras-white.png" alt="tienda_icon">
-                                        
-                                    </a>
-                                    
-                                    <span class="text_nav">TIENDA</span>
-                            </div>
-                            
-                        </div>
-                    </div> 
-                    <div class=" float-end col-3   contact_block">
-                      <img class="icon" src="img/phone-call-white.png" alt="phone">
-                          <br>
-                      <span class="text_nav">091234678</span>
+                  <div class="contact_block">
+                    
+                    <div class="icon_tienda">
+                      <!-- <div class="sombreado_tienda">
+                        <p></p>
+                      </div> -->
+                      <a> <img class="icon" src="img/carrito-de-compras-white.png" alt="tienda_icon"> </a>
+                      <span class="text_nav">TIENDA</span> 
+                    </div>
                   </div> 
-                   
-                </div>
-
-           
-            
+                  <!-- <div class="contact_block">
+                    <div class="icon_tienda">
+                      <a><img class="icon" src="img/phone-call-white.png" alt="phone"> </a>
+                      <span class="text_nav">091234678</span>
+                    </div>
+                  </div>  -->
+                </div> 
         </nav>
         <nav class="navbar m-0 p-0 ">
-          
             <div class="container-fluid m-0 p-0 container_opciones" >
-              
                 <div class="row col-12 nav_opciones">
   
                   <!-- <a href="#slides__1">INICIO</a>
                   <a href="#slides__2" >PERSPECTIVA</a>
                   <a href="#slides__3" >NOSOTROS</a>
                   <a href="#slides__4">CONTACTO</a> -->
-                  <a  onclick="showSlide(1)" href="#slides__1" >INICIO</a>
-                  <a  onclick="showSlide(2)" href="#slides__2" >PERSPECTIVA</a>
-                  <a  onclick="showSlide(3)" href="#slides__3" >NOSOTROS</a>
-                  <a  onclick="showSlide(4)" href="#slides__4" >CONTACTO</a>
-                  
-              
-
+                  <a  onclick="showSlide(1)" href="#slides__1" >Inicio</a>
+                  <a  onclick="showSlide(2)" href="#slides__2" >Perspectiva</a>
+                  <a  onclick="showSlide(3)" href="#slides__3" >Nosotros</a>
+                  <a  onclick="showSlide(4)" href="#slides__4" >Contacto</a>
                 </div>
-            
             </div>
-               
-               
-
-             
-
-          
         </nav>
-    </div>
-    
-    
+    </div>   
+  <!-- end header -->
+  <!-- start body -->
     <div class="slider-container">
         <div class="slider">
           <div class="slides">
+
+            <!-- inicio slide_1 -->
             <div id="slides__1" class="slide">
               
               <!-- <span class="slide__text">1</span> -->
               <div class="bg_img">
                 <img src="img/interior1_oficina.jpg" alt="">
               </div>
-              <div class="container_titulos">
+              <!-- <div class="container_titulos">
                 <div class="container_titulos_inv glass_effect">
                   <h1>Elige lo nuestro</h1>
                   <p>Tu mejor opción en
@@ -102,7 +84,7 @@
                   </p>
                 </div>
                 
-              </div>
+              </div> -->
               
               <div class="info_sections">
                 
@@ -110,7 +92,7 @@
                   <div class="slide_sombra">
                     <p></p>
                   </div>
-                  <div class="info_title_r">
+                  <div class="info_title_r" id="inicio_software">
                     <div class="mini_slider">
                       <ul>
                         <li>
@@ -133,10 +115,13 @@
                   </div>
                 </div>
                 <div class="info">
+                  <div class="slide_sombra">
+                    <p></p>
+                  </div>
                   <div class="info_text">
                     <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</section>
                   </div>
-                  <div class="info_title_l">
+                  <div class="info_title_l" id="inicio_hardware">
 
                     <div class="mini_slider">
                       <ul>
@@ -157,7 +142,10 @@
                   </div>
                 </div>
                 <div class="info">
-                  <div class="info_title_r">
+                  <div class="slide_sombra">
+                    <p></p>
+                  </div>
+                  <div class="info_title_r" id="inicio_seguridad" >
                     <div class="mini_slider">
                       <ul>
                         <li>
@@ -178,62 +166,172 @@
                     <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</section>
                   </div>
                 </div>
-                
-  
               </div>
+
               <a class="slide__prev" href="#slides__4" title="Next"></a>
               <a class="slide__next" href="#slides__2" title="Next"></a>
+
+              <div class="carrusel_container">
+                <div class="carrusel_title">
+                  <p>NUESTRAS MARCAS</p>
+                </div>
+                <div class="carrusel_items">
+                  
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/acer.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/asus.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/hp.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/epson.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/hikvision.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/logictech.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/kingstong.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/canon.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/genius.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/tplink.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/amd.png" alt="marcas">
+                  </div>
+                  <div  class="carrusel_item">
+                    <img class="img-fluid" src="img/marcas/nvidia.png" alt="marcas">
+                  </div>
+                 
+                 
+                  
+                </div>
+              </div>
+
               <div class="footer_container">
                 <div class="footer_principal">
-                  <div>Contacto</div>
-                <div>
-                  <ul>
-                    <li> 
-                      <a></a>
-                    </li>
-                    <li>
-                      <a></a>
-                    </li>
-                    <li>
-                      <a></a>
-                    </li>
-                    <li>
-                      <a></a>
-                    </li>
-                  </ul>
-                </div>
-                <div>Síguenos en nuestras redes</div>
+                  <div class="footer_contactos footer_links">
+                    <div>
+                      <a>Contáctanos</a>
+                    
+                      <ul>
+                        <li> <a  href="https://wa.me/593998749650?text=Saludos EasyTech, me gustaria saber mas de sus productos" > +593 (0) 99 874 9650</a></li>
+                        <li><a  href="mailto:info@easytech.com.ec" > info@easytech.com.ec</a></li>
+                        <li><a  href="#slides__4" >contáctanos</a></li>
+                      </ul>
 
-                
-  
+                    </div>
+                    
+                  </div>
+                  <div class="footer_nav footer_links">
+                    <div>
+                      <a class="footer_list_title" onclick="showSlide(1)" href="#slides__1" >Inicio</a>
+                      
+                      <ul>
+                        <li> <a href="#inicio_software" onclick="moveWindowX()">software</a></li>
+                        <li><a href="#inicio_hardware" onclick="moveWindowX()">hardware</a></li>
+                        <li><a href="#inicio_seguridad" onclick="moveWindowX()">seguridad</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(2)" href="#slides__2" >Perspectiva</a>
+                      
+                      <ul>
+
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Mision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Vision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Nuestros Valores</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(3)" href="#slides__3" >Nosotros</a>
+                      
+                      <ul>
+
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nosotros</a></li>
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nuestra Organizacion</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(4)" href="#slides__4" >Contacto</a>
+                      
+                      <ul>
+
+                        <li><a href="#contacto_form" onclick="moveWindowX()">Formulario</a></li>
+                        <li><a href="#contacto_map" onclick="moveWindowX()">Como llegar</a></li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  <div class="footer_redes footer_links">
+                    <a> Síguenos en nuestras redes.</a>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com/EasyTech.JR" target="_blank">
+                          <img src="img/ICONOS/FACEBOOK.png" alt="facebook">
+                        </a>
+                        
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/easytech_s.a.s/" target="_blank">
+                          <img src="img/ICONOS/IG .png" alt="instagram">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="footer_secundario">
                   <p>EasyTech &#169 2022 Todos los derechos reservados</p>
                 </div>
               </div>
-
-              
+         
             </div>
             
-
+            <!-- inicio slide_2 -->
             <div id="slides__2" class="slide">
               <div class="bg_img">
                 <img src="img/fachada_oficina.jpg" alt="">
               </div>
-              <div class="container_titulos">
+              <!-- <div class="container_titulos">
                 <div class="container_titulos_inv glass_effect">
                   <h1>EASY TECH</h1>
                   <p>Productos, servicios y seguridad tecnológica de calidad.</p>
                 </div>
-                
-              </div> 
-              <div class="info_sections_perspectiva">
-                <div class="info_perspectiva">
+              </div>  -->
+              <div class="info_sections_perspectiva"id="perspectiva_data" >
+                <div class="info_perspectiva"  >
                   <div class="info_title_perspectiva">
                     <h1>MISION</h1>
                   </div>
                   <div class="info_img_perspectiva">
-                    img
+                    
+                    <div class="mini_slider2" id="mini_slider2_1">
+                      <div class="hide_slide">
+                         
+                          <img src="img/fachada_oficina.jpg" alt="">
+                      </div>
+                      <div class="hide_slide">
+                          <img src="img/hands.jpg" alt="">
+              
+                      </div>
+                      <div class="show_slide">
+                        <img src="img/sections/engineer-4904884_1920.jpg" alt="">
+            
+                    </div>
+              
+                    </div>
+
                   </div>
                   <div class="info_text_perspectiva">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
@@ -244,7 +342,17 @@
                     <h1>VISION</h1>
                   </div>
                   <div class="info_img_perspectiva">
-                    img
+                    <div class="mini_slider2" id="mini_slider2_2">
+                      <div class="hide_slide">
+                         
+                          <img src="img/fachada_oficina.jpg" alt="">
+                      </div>
+                      <div class="show_slide">
+                          <img src="img/hands.jpg" alt="">
+              
+                      </div>
+              
+                    </div>
                   </div>
                   <div class="info_text_perspectiva">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
@@ -255,7 +363,17 @@
                     <h1>NUESTROS VALORES</h1>
                   </div>
                   <div class="info_img_perspectiva">
-                    img
+                    <div class="mini_slider2" id="mini_slider2_3">
+                      <div class="hide_slide">
+                         
+                          <img src="img/fachada_oficina.jpg" alt="">
+                      </div>
+                      <div class="show_slide">
+                          <img src="img/hands.jpg" alt="">
+              
+                      </div>
+              
+                    </div>
                   </div>
                   <div class="info_text_perspectiva">
                     <p>Responsabilidad:</p>
@@ -275,13 +393,91 @@
                 </div>
                 
               </div>
-              <!-- <img src="img/interior1_oficina.jpg" alt=""> -->
+              
               <a class="slide__prev" href="#slides__1" title="Next"></a>
               <a class="slide__next" href="#slides__3" title="Next"></a>
               <!-- <span class="slide__text">2</span> -->
+              <div class="footer_container">
+                <div class="footer_principal">
+                  <div class="footer_contactos footer_links">
+                    <a>Contáctanos</a>
+                    
+                    <ul>
+                      <li> 
+                        <a  href="https://wa.me/593998749650?text=Saludos EasyTech, me gustaria saber mas de sus productos" > +593 (0) 99 874 9650</a>
+                      </li>
+                      <li>
+                        <a  href="mailto:info@easytech.com.ec" > info@easytech.com.ec</a>
+                      </li>
+                      <li>
+                        <a  href="#slides__4" >contáctanos</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer_nav footer_links">
+                    <div>
+                      <a  onclick="showSlide(1)" href="#slides__1" >Inicio</a>
+                      
+                      <ul>
+                        <li> <a href="#inicio_software" onclick="moveWindowX()">software</a></li>
+                        <li><a href="#inicio_hardware" onclick="moveWindowX()">hardware</a></li>
+                        <li><a href="#inicio_seguridad" onclick="moveWindowX()">seguridad</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(2)" href="#slides__2" >Perspectiva</a>
+                      
+                      <ul>
+
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Mision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Vision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Nuestros Valores</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(3)" href="#slides__3" >Nosotros</a>
+                      
+                      <ul>
+
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nosotros</a></li>
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nuestra Organizacion</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(4)" href="#slides__4" >Contacto</a>
+                      
+                      <ul>
+
+                        <li><a href="#contacto_form" onclick="moveWindowX()">Formulario</a></li>
+                        <li><a href="#contacto_map" onclick="moveWindowX()">Como llegar</a></li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  <div class="footer_redes footer_links">
+                    <a> Síguenos en nuestras redes.</a>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com/EasyTech.JR" target="_blank">
+                          <img src="img/ICONOS/FACEBOOK.png" alt="facebook">
+                        </a>
+                        
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/easytech_s.a.s/" target="_blank">
+                          <img src="img/ICONOS/IG .png" alt="instagram">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer_secundario">
+                  <p>EasyTech &#169 2022 Todos los derechos reservados</p>
+                </div>
+              </div>
             </div>
 
-
+            <!-- inicio slide_3 -->
             <div id="slides__3" class="slide">
               <div class="bg_img">
                 <img src="img/oficina-scaled.jpg" alt="">
@@ -292,27 +488,30 @@
                   <p>Ser referentes en calidad en el sector tecnólogico</p>
                 </div>
               </div>
-              <div class="info_sections_4"> 
-                <!-- formulario de contacto en html y css -->  
-                <div class="container_form">
+              <div class="info_sections_nosotros"> 
+               
+                <div class="container_img_nosotros">
                   <div class="info_img_nosotros">
-                    img
+                    
+        
+                      <div class="cuadro_vista">
+                          <img src="img/oficina-scaled.jpg" alt="">
+                      </div>
+                  
                   </div>
                   
                 </div>
-                <div class="container_map"> 
+                <div class="container_text_nosotros"> 
                   
-                  <div class="info_title_nosotros" >
+                  <div class="info_title_nosotros" id="nosotros_data">
                     <h1>NOSOTROS</h1>
                   </div>
                   <div class="info_text_nosotros">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo similique deleniti sequi voluptatum adipisci tenetur quibusdam sapiente velit quasi enim laboriosam, neque esse iusto consequatur ducimus, quidem debitis eveniet.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia sapiente dolores fuga aliquam quas culpa veniam ab, magnam odit dolorem saepe sequi velit, expedita officiis. Reprehenderit repudiandae praesentium nulla! Nostrum.
+                    </p>
                   </div>  
 
-                    
-                    
-                    
-                  
                 </div>
                 
               </div>
@@ -325,8 +524,88 @@
               <a class="slide__prev" href="#slides__2" title="Next"></a>
               <a class="slide__next" href="#slides__4" title="Next"></a>
               <!-- <span class="slide__text">3</span> -->
+              <div class="footer_container">
+                <div class="footer_principal">
+                  <div class="footer_contactos footer_links">
+                    <a>Contáctanos</a>
+                    
+                    <ul>
+                      <li> 
+                        <a  href="https://wa.me/593998749650?text=Saludos EasyTech, me gustaria saber mas de sus productos" > +593 (0) 99 874 9650</a>
+                      </li>
+                      <li>
+                        <a  href="mailto:info@easytech.com.ec" > info@easytech.com.ec</a>
+                      </li>
+                      <li>
+                        <a  href="#slides__4" >contáctanos</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer_nav footer_links">
+                    <div>
+                      <a  onclick="showSlide(1)" href="#slides__1" >Inicio</a>
+                      
+                      <ul>
+                        <li> <a href="#inicio_software" onclick="moveWindowX()">software</a></li>
+                        <li><a href="#inicio_hardware" onclick="moveWindowX()">hardware</a></li>
+                        <li><a href="#inicio_seguridad" onclick="moveWindowX()">seguridad</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(2)" href="#slides__2" >Perspectiva</a>
+                      
+                      <ul>
+
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Mision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Vision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Nuestros Valores</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(3)" href="#slides__3" >Nosotros</a>
+                      
+                      <ul>
+
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nosotros</a></li>
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nuestra Organizacion</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(4)" href="#slides__4" >Contacto</a>
+                      
+                      <ul>
+
+                        <li><a href="#contacto_form" onclick="moveWindowX()">Formulario</a></li>
+                        <li><a href="#contacto_map" onclick="moveWindowX()">Como llegar</a></li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  <div class="footer_redes footer_links">
+                    <a> Síguenos en nuestras redes.</a>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com/EasyTech.JR" target="_blank">
+                          <img src="img/ICONOS/FACEBOOK.png" alt="facebook">
+                        </a>
+                        
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/easytech_s.a.s/" target="_blank">
+                          <img src="img/ICONOS/IG .png" alt="instagram">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer_secundario">
+                  <p>EasyTech &#169 2022 Todos los derechos reservados</p>
+                </div>
+              </div>
+
             </div>
 
+            <!-- inicio slide_4 -->
             <div id="slides__4" class="slide">
               <div class="bg_img">
                 <img src="img/hands.jpg" alt="">
@@ -337,44 +616,44 @@
                   <p>Ser referentes en calidad en el sector tecnólogico</p>
                 </div> 
               </div>
-              <div class="info_sections_4"> 
+              <div class="info_sections_contacto" id="contacto_form"> 
                 <!-- formulario de contacto en html y css -->  
-                <div class="container_form">
-                  <div class="formulario" >      
+                <div  class="container_form" >
+                  <div class="formulario">      
                       <h1>Siéntase libre en contactarse con nosotros</h1>
-                        <form action="Php/email.php" method="POST">       
+                        <form action="Php/email.php" name="email" method="POST">       
                           <div>
                             <label for="nombre" class="colocar_nombre">Nombre
                               <span class="obligatorio">*</span>
                             </label>
-                              <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                              <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
                           </div>
                         
                           <div>
                             <label for="email" class="colocar_email">Email
                               <span class="obligatorio">*</span>
                             </label>
-                            <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                            <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
                           </div>
                       
                           <div>
                             <label for="telefono" class="colocar_telefono">Teléfono
                             </label>
-                            <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                            <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
                           </div>    
                         
                           <div>
                             <label for="asunto" class="colocar_asunto">Asunto
                               <span class="obligatorio">*</span>
                             </label>
-                            <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+                            <input type="text" name="asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
                           </div>    
                         
                           <div>
                             <label for="mensaje" class="colocar_mensaje">Mensaje
                               <span class="obligatorio">*</span>
                             </label>                     
-                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                            <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
                           </div>                    
                         
                           <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
@@ -387,33 +666,51 @@
                   </div>  
                   
                 </div>
-                <div class="container_map"> 
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4360127250109!2d-78.13274880000002!3d0.3495962999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a3d0a5c3e707f%3A0x771b86dcca947d85!2sEasyTech%20S.A.S!5e0!3m2!1ses!2sec!4v1660199632515!5m2!1ses!2sec" width="80%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  <div>
-                    <div>
-                      <img src="img/simbolo-de-la-rejilla-de-la-tierra.png" alt=""> 
-                      <p>
-                        Abelardo Moran 2-19, Dr. Juan José Páez <br> Ibarra – Ecuador
-                      </p>
+                <div class="container_map" id="contacto_map"> 
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4360127250109!2d-78.13274880000002!3d0.3495962999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a3d0a5c3e707f%3A0x771b86dcca947d85!2sEasyTech%20S.A.S!5e0!3m2!1ses!2sec!4v1660199632515!5m2!1ses!2sec" width="80%" height="40%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <div class="info_map_container">
+                    <div class="info_map">
+                      <div class="icon_map_container">
+                        <img src="img/simbolo-de-la-rejilla-de-la-tierra.png" alt=""> 
+                      </div>
+                      <div class="info_map_text">
+                        <p>
+                          Abelardo Moran 2-19, Dr. Juan José Páez <br> Ibarra – Ecuador
+                        </p>
+                      </div>
+                      
                     </div>
-                    <div>
+                    <div class="info_map">
                       <img src="" alt="">
-                      <p>
-                        Horarios de atención 
-                      </p>
+                      <div class="info_map_text">
+                        <p class="subtitulo">
+                          Horarios de atención 
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <img src="img/CalendarMonthOutlineRounded-white.png" alt="">  
-                      <p>
-                        Lunes – Viernes:09:00 AM – 17:00 PM <br> Sábado: 08:00 AM – 13:00 PM
-                      </p>
+                    <div class="info_map">
+                      <div class="icon_map_container">
+                        <img src="img/CalendarMonthOutlineRounded-white.png" alt=""> 
+                      </div> 
+                      <div class="info_map_text">
+                        <p>
+                          Lunes – Viernes:09:00 AM – 17:00 PM<br>Sábado: 08:00 AM – 13:00 PM
+                        </p>
+                      </div>
+                      
                     </div>
                     
-                    <div>
-                      <img src="img/phone-call-white.png" alt=""> 
-                      <p>
-                        +593 (0) 99 874 9650 - info@easytech.com.ec
-                      </p>
+                    <div class="info_map">
+                      <div class="icon_map_container">
+                        <img src="img/phone-call-white.png" alt=""> 
+                      </div>
+                      <div class="info_map_text">
+                        <p>
+                          +593 (0) 99 874 9650 - info@easytech.com.ec
+                        </p>
+
+                      </div>
+                      
                     </div>
                     
                     
@@ -427,23 +724,95 @@
               <a class="slide__prev" href="#slides__3" title="Next"></a>
               <a class="slide__next" href="#slides__1" title="Next"></a>
               <!-- <span class="slide__text">4</span> -->
+              <div class="footer_container">
+                <div class="footer_principal">
+                  <div class="footer_contactos footer_links">
+                    <a>Contáctanos</a>
+                    
+                    <ul>
+                      <li> 
+                        <a  href="https://wa.me/593998749650?text=Saludos EasyTech, me gustaria saber mas de sus productos" > +593 (0) 99 874 9650</a>
+                      </li>
+                      <li>
+                        <a  href="mailto:info@easytech.com.ec" > info@easytech.com.ec</a>
+                      </li>
+                      <li>
+                        <a  href="#slides__4" >contáctanos</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer_nav footer_links">
+                    <div>
+                      <a  onclick="showSlide(1)" href="#slides__1" >Inicio</a>
+                      
+                      <ul>
+                        <li> <a href="#inicio_software" onclick="moveWindowX()">software</a></li>
+                        <li><a href="#inicio_hardware" onclick="moveWindowX()">hardware</a></li>
+                        <li><a href="#inicio_seguridad" onclick="moveWindowX()">seguridad</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(2)" href="#slides__2" >Perspectiva</a>
+                      
+                      <ul>
 
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Mision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Vision</a></li>
+                        <li><a href="#perspectiva_data" onclick="moveWindowX()">Nuestros Valores</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(3)" href="#slides__3" >Nosotros</a>
+                      
+                      <ul>
+
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nosotros</a></li>
+                        <li><a href="#nosotros_data" onclick="moveWindowX()">Nuestra Organizacion</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <a  onclick="showSlide(4)" href="#slides__4" >Contacto</a>
+                      
+                      <ul>
+
+                        <li><a href="#contacto_form" onclick="moveWindowX()">Formulario</a></li>
+                        <li><a href="#contacto_map" onclick="moveWindowX()">Como llegar</a></li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  <div class="footer_redes footer_links">
+                    <a> Síguenos en nuestras redes.</a>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com/EasyTech.JR" target="_blank">
+                          <img src="img/ICONOS/FACEBOOK.png" alt="facebook">
+                        </a>
+                        
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/easytech_s.a.s/" target="_blank">
+                          <img src="img/ICONOS/IG .png" alt="instagram">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer_secundario">
+                  <p>EasyTech &#169 2022 Todos los derechos reservados</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
           
     </div>
-
-
-
-
-
-
-
-      
+  <!--end body  -->
+  <!-- start scripts-->
     <script src="js/animaciones.js"> 
-         
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <!-- end scripts-->
+
 </body>
 </html>
